@@ -8,6 +8,9 @@ import Accounts from '../pages/Accounts';
 import SettingGeneral from '../pages/Settings/General';
 import SettingChangePassword from '../pages/Settings/ChangePassword';
 
+import AccountRegister from '../pages/Account/Register';
+import AccountLogin from '../pages/Account/Login';
+
 export const AdminRoutes: React.VFC<{}> = () => {
 	return (
 		<>
@@ -33,6 +36,19 @@ export const AdminRoutes: React.VFC<{}> = () => {
 
 			<Route path="/settings/change-password">
 				<SettingChangePassword />
+			</Route>
+		</>
+	);
+};
+
+export const DefaultRoutes: React.VFC<{}> = () => {
+	return (
+		<>
+			<Route path="/account/login" exact>
+				<AccountLogin />
+			</Route>
+			<Route path="/account/register" exact>
+				<AccountRegister />
 			</Route>
 		</>
 	);
